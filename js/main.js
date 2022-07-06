@@ -1,3 +1,7 @@
+
+/////////MIO STILE PRIMA DI STMATTINA
+/////////NON MI FACEVANO APPARIRE N-CARROZZA E N-CODICE CP
+
 /*//DATI//
 const nomeCognomeDom = document.getElementById('name');
 console.log(nomeCognomeDom);
