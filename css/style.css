@@ -11,3 +11,11 @@
 .pass_viaggio{
     display: none;
 }
+
+.ms_bg{
+    font-size: 60px;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
