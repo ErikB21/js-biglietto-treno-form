@@ -1,4 +1,4 @@
-//DATI//
+/*//DATI//
 const nomeCognomeDom = document.getElementById('name');
 console.log(nomeCognomeDom);
 
@@ -104,6 +104,67 @@ document.getElementById('generaBiglietto').addEventListener('click',
 document.getElementById('eliminaBiglietto').addEventListener('click', 
     function () {
         document.querySelector('.pass_viaggio').classList.remove('show');
+    }
+);*/
+
+const genera = document.getElementById('generaBiglietto');
+
+genera.addEventListener('click', 
+    function (){
+
+        const priceKm = 0.21;
+        console.log(priceKm);
+
+        const fullname = document.getElementById('name').value;
+        console.log(fullname);
+       
+        const km = parseInt(document.getElementById('numerokm').value );
+        console.log(km);
+
+        const age = document.getElementById('age').value;
+        console.log(age)
+
+
+        let ticketPrice = km * priceKm;
+        let promo = "Biglietto Standard";
+
+
+        if(age == 'junior'){
+            ticketPrice -= (ticketPrice / 100 * 20);
+            promo = "Sconto Minorenne"
+        } else if (age == 'senior'){
+            ticketPrice -= (ticketPrice / 100 * 40);
+            promo = "Sconto Over 65";
+        }
+
+        const carriageNumber = Math.floor(Math.random() * 10) + 1;
+        const prenotationNumber = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+
+        //IMPOSTO IL NOME DEL PASSEGGERO
+        document.getElementById('nomeBiglietto').innerHTML = fullname;
+        document.getElementById('nomeOfferta').innerHTML = promo;
+        document.getElementById('numeroCosto').innerHTML = ticketPrice.toFixed(2) + '€';
+        document.getElementById('numeroCarrozza').innerHTML = carriageNumber;
+        document.getElementById('numeroCodice').innerHTML = prenotationNumber;
+        document.getElementById('ticket').className = 'show';
+        
+    }
+);
+
+
+document.getElementById('cancellaBiglietto').addEventListener('click', 
+    function(){
+        document.getElementById('nomeBiglietto').innerHTML = '';
+        document.getElementById('nomeOfferta').innerHTML = '';
+        document.getElementById('numeroCosto').innerHTML = '';
+        document.getElementById('numeroCarrozza').innerHTML = '';
+        document.getElementById('numeroCodice').innerHTML = '';
+
+        document.getElementById('name').value ='';
+        document.getElementById('numerokm').value ='';
+        document.getElementById('age').value ='junior';
+
+        document.getElementById('ticket').className = 'pass_viaggio';
     }
 );
 

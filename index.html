@@ -10,67 +10,73 @@
 </head>
 <body class="bg-secondary">
 
-    <h1 class="text-center text-white">Calcola il Prezzo del Biglietto</h1>
+    <main>
 
-    <div class="container bg-primary mt-3 pt-3 pb-5 rounded">
-        <div class="row">
-            <div class="col-4 d-flex flex-column text-center">
-                <label for="name" class="pb-2">Nome e Cognome</label>
-                <input type="text" id="name" class="border border-dark rounded" required>
-            </div>
+        <section class="form-data bg-primary text-white my-3 py-3">
+            <h2 class="text-white text-center">CALCOLA IL PREZZO DEL BIGLIETTO</h2>
+            <div class="container bg-light rounded py-3">
+                <div class="row m-auto">
+
+                    <div class="col-4 d-flex flex-column text-center text-dark">
+                        <label for="name">Nome e Cognome</label>
+                        <input type="text"id="name" class="border-2 border-danger rounded">
+                    </div>
     
-            <div class="col-4 d-flex flex-column text-center">
-                <label for="numero" class="pb-2">Km da percorrere</label>
-                <input type="number" id="numero" class="border border-dark rounded" required>
-            </div>
-            
-            <div class="col-4 d-flex flex-column text-center">
-                <label for="numeroEta" class="pb-2">Età</label>
-                <input type="number" id="numeroEta" class="border border-dark rounded" required>
-            </div>
-            
-            <div class="pt-5 col-12 d-flex justify-content-center">
-                <button id="generaBiglietto" class="btn btn-success mx-3">
-                    Genera
-                </button>
-        
-                <button id="eliminaBiglietto" class="btn btn-danger mx-3">
-                    Annulla
-                </button>
-            </div>
-        </div>     
-    </div>
+                    <div class="col-4 d-flex flex-column text-center text-dark">
+                        <label for="numerokm">Km da percorrere</label>
+                        <input type="number" min="1" step="1" id="numerokm" class="border-2 border-danger rounded">
+                    </div>
+    
+                    <div class="col-4 d-flex flex-column text-center text-dark">
+                        <label for="age">Nome e Cognome</label>
+                        <select name="" id="age" class="border-2 border-danger rounded">
+                            <option value="junior">Minorenne</option>
+                            <option value="normal">Maggiorenne</option>
+                            <option value="senior">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="row text-center mt-5">
+                    <div class="col-12">
+                        <button id="generaBiglietto" class="btn btn-success">Genera</button>
+                        <button id="cancellaBiglietto" class="btn btn-danger">Annulla</button>
+                    </div>
+                </div>
+            </div>        
+        </section>
 
-    <div class="container d-none pass_viaggio">
-        <h2 class="h1 text-white">Il Tuo Biglietto</h2>
-        <div id="totTravel" class="container bg-primary mt-3 pt-3 pb-5 rounded">
-            <h4 class="text-white">Dettaglio Passeggeri</h4>
-            <div class="row m-3">
-                <div class="col-3 bg-dark text-white py-3">
-                    <h6 class="pb-4">NOME PASSEGERO</h6>
-                    <p id="nomeBiglietto"></p>
+        <section id="ticket" class="pass_viaggio bg-primary my-3 py-3">
+            <div class="container bg-light rounded py-3">
+                <div class="row m-auto">
+
+                    <div class="col-4 bg-dark text-white py-3">
+                        <h5 class="pb-4 text-warning">NOME PASSEGERO</h5>
+                        <p id="nomeBiglietto"></p>
+                    </div>
+                    <div class="col-8 d-flex justify-content-between bg-light py-3">
+                        <div>
+                            <h5 class="pb-4 text-warning">Offerta</h5>
+                            <p id="nomeOfferta"></p>
+                        </div>
+                        <div>
+                            <h5 class="pb-4 text-warning">Carrozza</h5>
+                            <p id="numeroCarrozza"></p>
+                        </div>
+                        <div>
+                            <h5 class="pb-4 text-warning">Codice CP</h5>
+                            <p id="numeroCodice"></p>
+                        </div>
+                        <div>
+                            <h5 class="pb-4 text-warning">Costo Biglietto</h5>
+                            <p id="numeroCosto"></p>
+                        </div>
+                    </div>            
                 </div>
-                <div class="col-9 d-flex justify-content-between bg-light py-3">
-                    <div>
-                        <h5 class="pb-4">Offerta</h5>
-                        <p id="nomeOfferta"></p>
-                    </div>
-                    <div>
-                        <h5 class="pb-4">Carrozza</h5>
-                        <p id="numeroCarrozza"></p>
-                    </div>
-                    <div>
-                        <h5 class="pb-4">Codice CP</h5>
-                        <p id="numeroCodice"></p>
-                    </div>
-                    <div>
-                        <h5 class="pb-4">Costo Biglietto</h5>
-                        <p id="nomeCosto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+           </div>
+        </section>
+            
+    </main>
         
     
 
