@@ -64,51 +64,6 @@ eliminaBigliettoDom.addEventListener('click',
         numeroEtaDom.value = '';
         document.getElementById('totTravel').innerHTML = '';
     }
-);
-
-
-
-
-
-document.getElementById('generaBiglietto').addEventListener('click', 
-    function () {
-        document.querySelector('.pass_viaggio').classList.add('show');
-        const numeroCarrozzaDom = document.getElementById('numeroCarrozza');
-        const numeroCodiceDom = document.getElementById('numeroCodice');
-        if(numeroDom.value >= 1){
-            if(numeroEtaDom.value < 18){
-                scontoRagazzi;
-                document.getElementById('nomeBiglietto').innerHTML = nomeCognomeDom.value;
-                document.getElementById('nomeOfferta').innerHTML = 'Sconto Ragazzi';
-                document.getElementById('numeroCarrozza').innerHTML = numeroCarrozzaDom;
-                document.getElementById('numeroCodice').innerHTML = numeroCodiceDom;
-                document.getElementById('nomeCosto').innerHTML = n + '€'; 
-            } else if(numeroEtaDom.value >= 65){
-                scontoAnziani;
-                document.getElementById('nomeBiglietto').innerHTML = nomeCognomeDom.value;
-                document.getElementById('nomeOfferta').innerHTML = 'Sconto Over 65';
-                document.getElementById('numeroCarrozza').innerHTML = numeroCarrozzaDom;
-                document.getElementById('numeroCodice').innerHTML = numeroCodiceDom;
-                document.getElementById('nomeCosto').innerHTML = nu + '€';
-            }else{
-                prezzoTotale;
-                document.getElementById('nomeBiglietto').innerHTML = nomeCognomeDom.value;
-                document.getElementById('nomeOfferta').innerHTML = 'Prezzo Ordinario';
-                document.getElementById('numeroCarrozza').innerHTML = numeroCarrozzaDom;
-                document.getElementById('numeroCodice').innerHTML = numeroCodiceDom;
-                document.getElementById('nomeCosto').innerHTML = num + '€';
-            }
-        }else{
-            console.log(numeroDom.value);
-        }
-        
-    }
-);
-
-document.getElementById('eliminaBiglietto').addEventListener('click', 
-    function () {
-        document.querySelector('.pass_viaggio').classList.remove('show');
-    }
 );*/
 
 const genera = document.getElementById('generaBiglietto');
